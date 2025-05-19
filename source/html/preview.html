@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Preview</title>
+    <link rel="stylesheet" href="/source/css/preview.css">
+</head>
+<body>
+    <section class="header">
+        <h1>Decorating time</h1>
+    </section>
+    
+    <main>
+        <section class="preview">
+            <div class="frame-container" id="frame">
+                <div class="photo-grid" id="photo-grid">
+                    <!-- Photos will be loaded here -->
+                </div>
+            </div>
+
+            <div class="decoration-tools">
+                <h2>Choose color for your frame</h2>
+                <div class="frame-color">
+                    <button data-color="#0E0E0E">Black</button>
+                    <button data-color="#FFFFFF">White</button>
+                    <button data-color="#D573A6">Pink</button>
+                    <button data-color="#1F0F6B">Navy</button>
+                    <button data-color="#F5F5DC">Beige</button>
+                    <button data-color="#9A4EAE">Purple</button>
+                </div>
+
+                <h2>Choose sticker for your frame</h2>
+                <div class="frame-sticker">
+                    <button data-sticker="none">None</button>
+                    <button data-sticker="hearts">Hearts</button>
+                    <button data-sticker="stars">Stars</button>
+                    <button data-sticker="flowers">Flowers</button>
+                    <button data-sticker="butterflies">Butterflies</button>
+                    <button data-sticker="music">Music Notes</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <button class="back-button" onclick="goBack()">Back to Camera</button>
+            <button onclick="downloadCombinedImage()" class="download-button">Download Framed Photos</button>
+        </div>
+    </main>
+
+    <canvas id="finalCanvas"></canvas>
+
+    <script src="/source/javascript/preview.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>

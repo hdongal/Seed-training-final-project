@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="/source/css/capture.css">
+</head>
+<body>
+    <section class="header">
+        <h1>Shooting Time</h1>
+    </section>
+
+    <section id="app-container">
+        <section class="video-container">
+            <button id="start-camera-btn">Start Camera</button>
+            <div class="video-wrapper">
+                <video id="video" autoplay></video>
+            </div>
+
+            <div class="control">
+                <div class="timer-container">
+                    <input type="number" min="0" placeholder="Timer (Sec)" id="timer">
+                </div>
+
+                <div class="button-container">
+                    <button id="capture-btn">Click Photo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="image-container"></section>  <!-- images are rendered here -->
+        
+        <canvas id="canvas" style="display: none;"></canvas>
+    </section>
+    <script src="/source/javascript/capture.js"></script>
+</body>
+</html>

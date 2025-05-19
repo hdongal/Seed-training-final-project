@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+    position: relative;
+    margin: 0 20px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.header{
+    text-align: center;
+}
+
+.header h1 {
+    font-family: "Birthstone Bounce", cursive;
+    font-weight: 500;
+    font-size: 5rem;
+}
+
+#app-container{
+    margin: 0 0 10px 0;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* This creates a 3:2 aspect ratio (2/3 = 0.6667 = 66.67%) */
+    overflow: hidden;
+    border: solid black 2px;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#start-camera-btn{
+    margin: 20px 0;
+}
+
+.control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    margin: 20px 0;
+}
+
+button{
+    color: white;
+    background-color: rgb(188, 95, 143);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Cormorant Garamond", serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: rgb(163, 78, 122);
+}
+
+.timer-container input{
+    border: solid black 1.5px;
+    width: fit-content;
+    height: max-content;
+}
+
+.countdown-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    display: none;
+    z-index: 1000;
+}
+
+#image-container{
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 30px;
+    align-items: center;
+    width: max-content;
+}
+
+#image-container img {
+    width: 225px;
+    height: 150px;
+    object-fit: cover;
+}

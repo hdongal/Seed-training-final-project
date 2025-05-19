@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+    position: relative;
+    margin: 0 20px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* header  */
+.header {
+    display: block;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: "Birthstone Bounce", cursive;
+    font-weight: 500;
+    font-size: 64px;
+    padding: 5px;
+}
+
+/* button section */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #bc5f8f;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a34e7a;;
+}
+
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    background-color: #666;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* main section */
+.preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5vw;
+}
+
+/* photo frame section  */
+.frame-container {
+    width: 225px;
+    height: auto;
+    background-color: black;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.frame-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.frame-container[data-sticker="hearts"]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+}
+
+.frame-container[data-sticker="stars"]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+}
+
+.frame-container[data-sticker="flowers"]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2M15.5,8C16.3,8 17,8.7 17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8M8.5,8C9.3,8 10,8.7 10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8M12,14C13.1,14 14,14.9 14,16C14,17.1 13.1,18 12,18C10.9,18 10,17.1 10,16C10,14.9 10.9,14 12,14Z"/></svg>');
+}
+
+.frame-container[data-sticker="butterflies"]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12.5,9.36L10.61,7.47L12.5,5.58L14.39,7.47L12.5,9.36M12,20C6.5,20 2,15.5 2,10C2,4.5 6.5,0 12,0C17.5,0 22,4.5 22,10C22,15.5 17.5,20 12,20M12,2C7.6,2 4,5.6 4,10C4,14.4 7.6,18 12,18C16.4,18 20,14.4 20,10C20,5.6 16.4,2 12,2Z"/></svg>');
+}
+
+.frame-container[data-sticker="music"]::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>');
+}
+
+.photo-grid {
+    display: grid;
+    gap: 15px;
+    height: 100%;
+}
+
+.photo-container {
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* decoration tools secttion */
+.frame-color {
+    display: flex;
+    flex-direction: row;
+}
+
+.frame-sticker {
+    display: flex;
+    flex-direction: row;
+}
+
+.decoration-tools h2 {
+    text-align: center;  
+}
+
+.decoration-tools button {
+    width: 100%;
+    border: solid 2px black;
+    border-radius: 50px;
+    background-color: #f5f5f5;
+    color: black;
+    transition: all 0.3s ease;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px
+}
+
+.frame-sticker button.active {
+    background-color: #bc5f8f;
+    color: white;
+    border-color: #bc5f8f;
+}
+
+#finalCanvas {
+    display: none;
+}
