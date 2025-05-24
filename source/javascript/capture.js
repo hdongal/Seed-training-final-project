@@ -1,5 +1,6 @@
 const camera_button = document.querySelector("#start-camera-btn");
 const video = document.querySelector("#video");
+video.style.transform = "scaleX(-1)";  // Add mirror effect
 const capture_button = document.querySelector("#capture-btn");
 const image_container = document.querySelector("#image-container");
 const timerInput = document.querySelector("#timer");
@@ -24,7 +25,8 @@ async function initCamera(){
 			video: {
 				width: { ideal: 1620 },
 				height: { ideal: 1080 },
-				aspectRatio: 3/2
+				aspectRatio: 3/2,
+				facingMode: "user"  // Use front-facing camera
 			}, 
 			audio: false 
 		});
@@ -122,12 +124,13 @@ async function captureImage(){
     savedImages.push(image_data_url);
     localStorage.setItem('capturedImages', JSON.stringify(savedImages));
 
-	const captureImage = new Image();
-	captureImage.src = image_data_url;
-	captureImage.style.width = "225px";
-	captureImage.style.height = "150px";
-	captureImage.style.objectFit = "cover";
-	image_container.prepend(captureImage);
+    const captureImage = new Image();
+    captureImage.src = image_data_url;
+    captureImage.style.width = "225px";
+    captureImage.style.height = "150px";
+    captureImage.style.objectFit = "cover";
+    captureImage.style.transform = "scaleX(-1)";  // Flip the captured image to match video
+    image_container.prepend(captureImage);
 	
 	photoCount++;
 	

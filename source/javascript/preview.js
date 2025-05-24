@@ -12,6 +12,7 @@ let isClosingBrowser = false;
                 const img = new Image();
                 img.src = imageData;
                 img.alt = `Captured photo ${index + 1}`;
+                img.style.transform = "scaleX(-1)";  // Add mirror effect to match capture page
                 
                 photoContainer.appendChild(img);
                 photoGrid.appendChild(photoContainer);
