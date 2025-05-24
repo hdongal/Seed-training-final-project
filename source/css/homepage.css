@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+}
+
 body {
     position: relative;
-    font-family: "Cormorant Garamond", serif;
 }
 .container {
     display: flex;
@@ -24,7 +30,7 @@ h1 {
 
 .start-button {
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 24px;
     background-color: rgb(188, 95, 143);
     border: none;
     border-radius: 50px;
@@ -39,6 +45,4 @@ h1 {
 .start-button a {
     color: white;
     text-decoration: none;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 24px;
 }
